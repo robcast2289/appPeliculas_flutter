@@ -2,6 +2,7 @@
 
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
 import '../models/models.dart';
 
@@ -16,7 +17,7 @@ class CardSwiper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    timeDilation = 3.0;
     final size = MediaQuery.of(context).size;
 
     if(this.movies.length == 0) {
